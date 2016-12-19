@@ -17,7 +17,6 @@ void* NotificationRegistry::start_notif_registration_thread(void* data)
 
 bool NotificationRegistry::createThreadforNotifReg(StartMethod method, void* data)
 {
-	cout<<"Here";
     bool return_code = true;
     assert(method);
     pthread_smart_attr smart_attr(PTHREAD_CREATE_DETACHED);
