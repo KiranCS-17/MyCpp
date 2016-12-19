@@ -9,7 +9,7 @@ extern "C" void* startNotifRegThreadRoutine(void* data)
 void* NotificationRegistry::start_notif_registration_thread(void* data)
 {
    cout<<"Inside thread function"<<(*(char*)(data))<<endl;
-   /* Add all Your LogicHere*
+   /* Add all Your Logic Here*
       Below Example runs a system command and parses the output.
    */
    NotificationRegistry::RunCmd("ls");
@@ -27,7 +27,7 @@ bool NotificationRegistry::createThreadforNotifReg(StartMethod method, void* dat
         return_code = false;
     }
 
-    return false;
+    return return_code;
 }
 void NotificationRegistry::RunCmd(string& cmd) {
 
