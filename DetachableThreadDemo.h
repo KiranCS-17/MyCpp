@@ -40,7 +40,7 @@ extern "C" typedef  void* (* StartMethod)(void*);
 
     public:
         static void* start_notif_registration_thread(void* data);
-		static void RunCmd(string& cmd);
+	static void RunCmd(string& cmd);
         void start_thread();
 
     private:
