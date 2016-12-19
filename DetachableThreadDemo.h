@@ -37,16 +37,13 @@ extern "C" typedef  void* (* StartMethod)(void*);
 
  class NotificationRegistry
  {
-
     public:
         static void* start_notif_registration_thread(void* data);
 	static void RunCmd(string& cmd);
         void start_thread();
-
     private:
      pthread_t m_thread_notif_reg;
      pthread_mutex_t m_mutex;
      bool createThreadforNotifReg(StartMethod method, void* data);
-
   };
 
