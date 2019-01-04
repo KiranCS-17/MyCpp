@@ -28,6 +28,7 @@ char interest[] = "10.43.199.176";
 
 void handle_signal(int signum);
 
+//./client 10.43.199.176 10.43.200.11
 int main(int argc, char** argv)
 {
     int i;
