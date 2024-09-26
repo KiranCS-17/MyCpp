@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gclient
+  namespace: reg-app
+spec:
+  selector:
+    matchLabels:
+      app: gclient
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: gclient
+    spec:
+      hostNetwork: false
+      containers:
+      - name: gclient
+        image: docker.io/kirancs/gclient:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 1234
+        volumeMounts:
+        - name: log-storage
+          mountPath: /logs
+      volumes:
+       - name: log-storage
+         emptyDir: {}
