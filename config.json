@@ -1,0 +1,20 @@
+{
+    "key1": "10",
+    "key2": "value2",
+    "nested": {
+        "key2": "nested_value2",
+        "key3": {
+            "subkey1": "isubvalue1",
+            "subkey2": "subvalue2"
+        }
+    },
+    "settings": {
+        "option1": true,
+        "option2": false,
+        "thresholds": {
+            "min": 10,
+            "max": 100
+        }
+    }
+}
+
