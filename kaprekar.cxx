@@ -41,6 +41,15 @@ void getAscDscNum(unsigned int inputNum,unsigned int& ascNum,unsigned int& dscNu
 {
   std::vector<int> v;
   breakNum(inputNum,v);
+  if(v.size() == 3)
+  {
+     v.push_back(0);
+  }
+  if ( std::adjacent_find( v.begin(), v.end(), std::not_equal_to<>() ) == v.end() )
+  {
+   cout<<"all digits are equal , give another input with atleast one digit not same"<<endl;
+   exit(1);
+  }
   sort(v.begin(), v.end(), greater<int>());
   ascNum = makeNum(v);
   reverse(v.begin(), v.end());
